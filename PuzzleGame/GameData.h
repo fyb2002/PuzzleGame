@@ -4,18 +4,18 @@ enum Object
 	OBJ_SPACE,
 	OBJ_GOAL,
 	OBJ_BLOCK,
-	OBJ_BLAOCKONGOAL,
+	OBJ_BLOCKONGOAL,
 	OBJ_PLAYER,
 	OBJ_PLAYERONGOAL,
-	OBJ_NEXTFLOOR,
+	OBJ_END_LINE,
 
 	OBJ_UNKNOWN
 };
 
 struct GameData {
-	Object *mStateMap;
-	int mSize;
-
+	Object **mStateMap;
+	int mHeight;
+	
 	GameData(const char* mapData);
 	~GameData();
 
